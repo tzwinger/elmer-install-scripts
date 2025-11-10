@@ -1,3 +1,4 @@
+**NOTE!** The installations folders are hard coded. One has to change them. This had direct effect on the precache cmake options [afar.cmake](afar.cmake), which needs to be fixed accordingley.
 ## Get Compiler
 Get the binaries from amd repository:
 ```
