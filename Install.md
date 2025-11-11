@@ -51,8 +51,13 @@ ln -s $CRAY_MPICH_DIR/lib $wd/mpich-3.4a2-install/lib
 ## Install ELMER with MPI, without ROCALUTION
 
 ```
-export AMDFLANMG_MPICH_DIR=/scratch/project_462000007/cristian/ELMER/ELMER_FLANG/cva_dump/rocm-afar-8873-drop-22.2.0/
-export MPICH_DIR=/scratch/project_462000007/cristian/ELMER/ELMER_FLANG/ELMER_MONDAY/mpich-3.4a2-install
+export AMDFLANMG_DIR=/scratch/project_462000007/cristian/ELMER/ELMER_FLANG/cva_dump/rocm-afar-8873-drop-22.2.0/
+export AMDFLANMG_MPICH_DIR=/scratch/project_462000007/cristian/ELMER/ELMER_FLANG/ELMER_MONDAY/mpich-3.4a2-install
+
+<!-- 
+#export AMDFLANMG_MPICH_DIR=/scratch/project_462000007/cristian/ELMER/ELMER_FLANG/cva_dump/rocm-afar-8873-drop-22.2.0/
+#export MPICH_DIR=/scratch/project_462000007/cristian/ELMER/ELMER_FLANG/ELMER_MONDAY/mpich-3.4a2-install -->
+
 ```
 Get ELMER with all dependencies
 ```
