@@ -2,7 +2,7 @@
 ## Get Compiler
 Get the binaries from amd repository:
 ```
-https://repo.radeon.com/rocm/misc/flang/rocm-afar-8873-drop-22.2.0-alma.tar.bz2
+wget https://repo.radeon.com/rocm/misc/flang/rocm-afar-8873-drop-22.2.0-alma.tar.bz2
 ```
 ```
 tar -xvjf  rocm-afar-8873-drop-22.2.0-alma.tar.bz2
