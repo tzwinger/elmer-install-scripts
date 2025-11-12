@@ -54,13 +54,6 @@ ln -s $CRAY_MPICH_DIR/lib $wd/mpich-3.4a2-install/lib
 export AMDFLANG_DIR=/scratch/project_462000007/cristian/ELMER/ELMER_FLANG/cva_dump/rocm-afar-8873-drop-22.2.0/
 export AMDFLANG_MPICH_DIR=/scratch/project_462000007/cristian/ELMER/ELMER_FLANG/ELMER_MONDAY/mpich-3.4a2-install
 ```
-or is it?
-```
-export AMDFLANG_MPICH_DIR=/scratch/project_462000007/cristian/ELMER/ELMER_FLANG/cva_dump/rocm-afar-8873-drop-22.2.0/
-export MPICH_DIR=/scratch/project_462000007/cristian/ELMER/ELMER_FLANG/ELMER_MONDAY/mpich-3.4a2-install
-```
-
-
 Get ELMER with all dependencies
 ```
 git clone https://github.com/ElmerCSC/elmerfem.git  --recursive 
