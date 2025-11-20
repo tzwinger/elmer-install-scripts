@@ -3,8 +3,12 @@ whatis("Version: 8743")
 whatis("Category: compiler")
 whatis("URL: https://repo.radeon.com/rocm/misc/flang/rocm-afar-8873-drop-22.2.0-alma.tar.bz2")
 
-local base = "/scratch/project_462000007/cristian/ELMER/ELMER_FLANG/cva_dump/rocm-afar-8873-drop-22.2.0"
+local base = "/appl/local/csc/soft/eng/elmer/rocm-afar-8873-drop-22.2.0"
 
+depends_on('LUMI/24.03')
+depends_on('partition/G')
+depends_on('buildtools/24.03')
+depends_on('rocm/6.2.2')
 
 append_path("LD_LIBRARY_PATH", "/lib64")
 append_path("LD_LIBRARY_PATH", "/lib")
@@ -29,3 +33,5 @@ pushenv("F77", 'amdflang-new')
 pushenv("LLVM_PATH", base)
 pushenv("ROCM_PATH", base)
 pushenv("HIP_PATH", base)
+pushenv("AMDFLANG_DIR", base)
+pushenv("AMDFLANG_MPICH_DIR", pathJoin(base,"mpich-3.4a2-install")
