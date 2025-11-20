@@ -50,7 +50,7 @@ export wd=$PWD
 mv $wd/mpich-3.4a2-install/lib $wd/mpich-3.4a2-install/lib-original
 ln -s $CRAY_MPICH_DIR/lib $wd/mpich-3.4a2-install/lib
 ```
-
+## Install rocALUTION
 ## Install ELMER with MPI, without ROCALUTION
 
 ```
