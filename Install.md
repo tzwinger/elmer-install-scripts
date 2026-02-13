@@ -10,12 +10,12 @@ tar -xvjf  rocm-afar-8873-drop-22.2.0-alma.tar.bz2
 
 ## Compiler Usage
 ```
-ml LUMI/24.03 partition/G buildtools/24.03
-module use /scratch/project_462000007/cristian/ELMER/ELMER_FLANG/modules
-module load rocm/6.2.2
+ml LUMI/25.03 partition/G buildtools/25.03
+module use /project/project_462000007/tzwinger/Elmer-clang-afar/modules
+module load rocm/6.3.4
 module load afar-8873-drop-22.2.0-alma
 ```
-New module under `/appl/local/csc/modules/elmer`
+TODO: New module under `/appl/local/csc/modules/elmer`
 ```
 module load afar-8873-drop-22.2.0-alma
 ```
