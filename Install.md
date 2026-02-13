@@ -1,4 +1,8 @@
 **NOTE!** The installations folders are hard coded. One has to change them. This had direct effect on the precache cmake options [afar.cmake](afar.cmake), which needs to be fixed accordingley.
+## define main installtion path
+```
+INSTALLPREFIX="/project/project_462000007/tzwinger/Elmer-clang-afar/install"
+```
 ## Get Compiler
 Get the binaries from amd repository:
 ```
@@ -32,7 +36,7 @@ Then
 cd mpich-3.4.a2
 mkdir -p build
 cd build
-../configure CC=$(which amdclang) CXX=$(which amdclang++) FC=$(which amdflang) F77=$(which amdflang)  --prefix="/appl/local/csc/soft/eng/elmer/rocm-afar-8873-drop-22.2.0/mpich-3.4a2-install"     --enable-fortran=all     --enable-cxx     --with-device=ch4:ofi     --with-libfabric=/opt/cray/libfabric/1.15.2.0     --with-hip=$ROCM_PATH --with-hip-sm='gfx90a' |& tee log.configure.txt
+../configure CC=$(which amdclang) CXX=$(which amdclang++) FC=$(which amdflang) F77=$(which amdflang)  --prefix="$INSTALLPREFIX/rocm-afar-8873-drop-22.2.0/mpich-3.4a2-install"     --enable-fortran=all     --enable-cxx     --with-device=ch4:ofi     --with-libfabric=/opt/cray/libfabric/1.22.0     --with-hip=$ROCM_PATH --with-hip-sm='gfx90a' |& tee log.configure.txt
 sed -i 's#wl=""#wl="-Wl,#g' libtool
 ```
 
@@ -41,7 +45,6 @@ Then
 ```
 make -j 
 make  install
-```
 
 If all works make symbolic links to the system mpich libraries:
 ```
