@@ -1,7 +1,7 @@
 **NOTE!** The installations folders are hard coded. One has to change them. This had direct effect on the precache cmake options [afar.cmake](afar.cmake), which needs to be fixed accordingley.
 ## define main installtion path
 ```
-INSTALLPREFIX="/project/project_462000007/tzwinger/Elmer-clang-afar/install"
+INSTALLPREFIX="/projappl/project_462000007/tzwinger/Elmer-clang-afar/install"
 ```
 ## Get Compiler
 Get the binaries from amd repository:
