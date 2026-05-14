@@ -45,7 +45,7 @@ Then
 ```
 make -j 
 make  install
-
+```
 If all works make symbolic links to the system mpich libraries:
 ```
 cd /appl/local/csc/soft/eng/elmer/rocm-afar-8873-drop-22.2.0
@@ -66,9 +66,13 @@ Get ELMER with all dependencies
 ```
 git clone https://github.com/ElmerCSC/elmerfem.git  --recursive 
 ```
+
 Cmake for ELMER:
 ```
-cmake -C /scratch/project_462000007/cristian/ELMER/ELMER_FLANG/ELMER_MONDAY/afar.cmake  ../elmerfem/ -DCMAKE_INSTALL_PREFIX=/scratch/project_462000007/cristian/ELMER/ELMER_FLANG/ELMER_MONDAY/elmer-install -DWITH_LUA=ON -DWITH_OpenMP=ON -Wno-dev -DWITH_MPI=ON -DBLAS_LIBRARIES="-L ${CRAY_LIBSCI_PREFIX}/lib -lsci_cray"      -DLAPACK_LIBRARIES="-L ${CRAY_LIBSCI_PREFIX}/lib -lsci_cray"
+rm -fr elmerbuild
+mkdir elmerbuild
+cd elmerbuild
+cmake -C /project/project_462000007/tzwinger/Elmer-clang-afar/afar.cmake ../elmerfem/ -DCMAKE_INSTALL_PREFIX=/project/project_462000007/tzwinger/Elmer-clang-afar/install/elmer  -DWITH_LUA=ON -DWITH_OpenMP=ON -Wno-dev -DWITH_MPI=ON -DBLAS_LIBRARIES="-L ${CRAY_LIBSCI_PREFIX}/lib -lsci_cray" -DLAPACK_LIBRARIES="-L ${CRAY_LIBSCI_PREFIX}/lib -lsci_cray"
 ```
 ```
 make -j 
